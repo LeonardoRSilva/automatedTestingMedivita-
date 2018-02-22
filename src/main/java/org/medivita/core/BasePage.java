@@ -34,7 +34,7 @@ public class BasePage {
 	}
 	public void escreverByCssSeletor(String seletor, String texto) {
 		WebDriverWait some_element = new WebDriverWait(getDriver(),100); 
-		some_element.until(ExpectedConditions.visibilityOfElementLocated(By.name(seletor))).sendKeys(texto);;
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(By.name(seletor))).sendKeys(texto);
 		//getDriver().findElement(By.xpath("//INPUT[@id='input_0']")).sendKeys(texto);;
 	}
 	
@@ -126,6 +126,11 @@ public class BasePage {
 		getDriver().findElement(by).click();
 	}
 	
+	public void esperarElementoEClicarBotao(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(),100); 
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+	}
+	
 	public void clicarBotao(String id) {
 		clicarBotao(By.id(id));
 	}
@@ -134,6 +139,16 @@ public class BasePage {
 		return getDriver().findElement(By.id(id)).getAttribute("value");
 	}
 	
+	/**** Menu esquerdo*****/
+	
+	public void selecionarItemMenu(By by) {
+		getDriver().findElement(by).click();
+	}
+	
+	public void fecharMenuEsquerdo(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(),100); 
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+	}
 	
 	/********* Link ************/
 	
