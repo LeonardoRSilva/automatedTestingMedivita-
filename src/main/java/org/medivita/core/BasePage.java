@@ -131,6 +131,13 @@ public class BasePage {
 		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
 	}
 	
+	public void esperarElementofechar(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(),100); 
+		System.out.println(some_element.until(ExpectedConditions.invisibilityOfElementLocated(by)));
+			
+	}
+	
+	
 	public void clicarBotao(String id) {
 		clicarBotao(By.id(id));
 	}
