@@ -34,7 +34,7 @@ public class CargoStepDefinition {
 	@Before("@First")
 	public void inicalizar() {
 		page.acessarTelaInicial();
-		page.logar("admin@admin.com", "leonardo1900");
+		page.logar("admin@admin.com", "admin");
 	}
 
 	@After
@@ -51,25 +51,25 @@ public class CargoStepDefinition {
 
 	@Given("^abrir menu esquerdo e selecionar item cargo$")
 	public void abrir_menu_esquerdo_link_de_cargo() throws Throwable {
-		menuEsquerdoPage.abrirCargo("3");
+		menuEsquerdoPage.abrirCargo("cargos");
 	}
 
 	@Given("^esperar toast fechar$")
 	public void esperar_toast_fechar() throws Throwable {
 		cargoPage.esperarToastFechar(
 				"//MD-TOAST[@class='ng-scope _md md-default-theme md-bottom ng-animate ng-leave ng-leave-active']");
-		cargoPage.esperarToastFechar("//div[@class='md-toast-content']");
-		cargoPage.clicarBotaoNovoCargo("//BUTTON[@class='md-fab md-fab-bottom-right md-button md-ink-ripple']");
+		cargoPage.esperarToastFechar("//DIV[@class='md-toast-content']");
+
 	}
 
 	@Given("^clicar botao novo cargo$")
 	public void clicar_botao_novo_cargo() throws Throwable {
-
+		cargoPage.clicarBotaoNovoCargo("//BUTTON[@class='md-fab md-fab-bottom-right md-button md-ink-ripple']");
 	}
 
 	@Given("^preencher_campos e enviar$")
 	public void preencher_campos_e_enviar() throws Throwable {
-		cargoPage.preencherCamposEEnviar("Cargo Teste", "Descrio cargo teste",
+		cargoPage.preencherCamposEEnviar("Cargo Teste", "Descrição cargo teste", "categoria", "Administrativo",
 				"//BUTTON[@class='md-primary md-raised md-button md-ink-ripple']");
 	}
 

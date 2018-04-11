@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 16780088920,
+  "duration": 12429781854,
   "status": "passed"
 });
 formatter.scenario({
@@ -54,36 +54,32 @@ formatter.match({
   "location": "CargoStepDefinition.abrir_menu_esquerdo_link_de_cargo()"
 });
 formatter.result({
-  "duration": 4331933849,
+  "duration": 5501042671,
   "status": "passed"
 });
 formatter.match({
   "location": "CargoStepDefinition.esperar_toast_fechar()"
 });
 formatter.result({
-  "duration": 5088401787,
+  "duration": 1395717867,
   "status": "passed"
 });
 formatter.match({
   "location": "CargoStepDefinition.clicar_botao_novo_cargo()"
 });
 formatter.result({
-  "duration": 31999,
+  "duration": 578106095,
   "status": "passed"
 });
 formatter.match({
   "location": "CargoStepDefinition.preencher_campos_e_enviar()"
 });
 formatter.result({
-  "duration": 2094488759,
+  "duration": 6087685139,
   "status": "passed"
 });
 formatter.after({
-  "duration": 619167506,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 784345333,
+  "duration": 897986143,
   "status": "passed"
 });
 formatter.scenario({
@@ -101,7 +97,7 @@ formatter.scenario({
   ]
 });
 formatter.after({
-  "duration": 325712844,
+  "duration": 493117892,
   "status": "passed"
 });
 });

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 16780088920,
+              "duration": 12429781854,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 619167506,
+              "duration": 897986143,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4331933849,
+              "duration": 5501042671,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 5088401787,
+              "duration": 1395717867,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 31999,
+              "duration": 578106095,
               "status": "passed"
             },
             "line": 8,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 2094488759,
+              "duration": 6087685139,
               "status": "passed"
             },
             "line": 9,
@@ -89,17 +89,6 @@
         ]
       },
       {
-        "before": [
-          {
-            "result": {
-              "duration": 784345333,
-              "status": "passed"
-            },
-            "match": {
-              "location": "CargoStepDefinition.inicalizar()"
-            }
-          }
-        ],
         "line": 13,
         "name": "Editar Cargo",
         "description": "",
@@ -107,7 +96,7 @@
         "after": [
           {
             "result": {
-              "duration": 325712844,
+              "duration": 493117892,
               "status": "passed"
             },
             "match": {

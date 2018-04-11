@@ -126,13 +126,17 @@ public class BasePage {
 		getDriver().findElement(by).click();
 	}
 
+	public void clicarComboBox(By by) {
+		getDriver().findElement(by).click();
+	}
+
 	public void esperarElementoEClicarBotao(By by) {
 		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
 		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
 	}
 
 	public void esperarElementofechar(By by) {
-		WebDriverWait some_element = new WebDriverWait(getDriver(), 200);
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
 		System.out.println(some_element.until(ExpectedConditions.invisibilityOfElementLocated(by)));
 
 	}

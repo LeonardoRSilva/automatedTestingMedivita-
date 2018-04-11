@@ -28,13 +28,21 @@ public class CargoPage extends BasePage {
 		escreverByCssSeletor("descricao", descricao);
 	}
 
+	public void selecionar_item_combobox(By elCombo, By item) {
+		clicarComboBox(elCombo);
+		clicarComboBox(item);
+	}
+
 	public void enviar(String text) {
 		clicarBotao(By.xpath(text));
 	}
 
-	public void preencherCamposEEnviar(String nome, String descricao, String btnEnviar) {
+	public void preencherCamposEEnviar(String nome, String descricao, String elComboBox, String itemComboBox,
+			String btnEnviar) {
 		setNome(nome);
 		setDescricao(descricao);
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
+				By.xpath("//MD-OPTION[@value='" + itemComboBox + "']"));
 		enviar(btnEnviar);
 	}
 

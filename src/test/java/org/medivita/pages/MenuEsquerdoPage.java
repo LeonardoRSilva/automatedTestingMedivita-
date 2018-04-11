@@ -23,8 +23,12 @@ public class MenuEsquerdoPage extends BasePage {
 
 	public void abrirCargo(String pos) {
 		abriMenu("//MD-ICON[@md-svg-icon='menu']");
-		selecionarMenu("(//DIV[@layout='row'])[" + pos + "]");
-		fecharMenu("//MD-BACKDROP[@class='md-sidenav-backdrop md-opaque ng-scope']");
+		// selecionarMenu("(//DIV[@layout='row'])[" + pos + "]");
+		selecionarMenu("//MD-ACCORDION-BUTTON[@href='#!/" + pos + "']");
+		/*
+		 * fecharMenu("//MD-BACKDROP[@class='md-sidenav-backdrop md-opaque ng-scope']"
+		 * );
+		 */
 	}
 
 }
