@@ -1,5 +1,5 @@
-@ready_for_testing
-Feature: Test Cargo
+@funtional_test_cargo
+Feature: Caso de Teste de Cargo
 
 @First 
 Scenario: Novo Cargo
@@ -9,3 +9,5 @@ Scenario: Novo Cargo
 	Then preencher_campos e enviar
 	
 
+@Second
+Scenario: Editar Cargo

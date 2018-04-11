@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 19244473908,
+              "duration": 16780088920,
               "status": "passed"
             },
             "match": {
@@ -17,11 +17,11 @@
         "line": 5,
         "name": "Novo Cargo",
         "description": "",
-        "id": "test-cargo;novo-cargo",
+        "id": "caso-de-teste-de-cargo;novo-cargo",
         "after": [
           {
             "result": {
-              "duration": 509266303,
+              "duration": 619167506,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4223833622,
+              "duration": 4331933849,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 4031065781,
+              "duration": 5088401787,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 250305495,
+              "duration": 31999,
               "status": "passed"
             },
             "line": 8,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 1635620808,
+              "duration": 2094488759,
               "status": "passed"
             },
             "line": 9,
@@ -87,17 +87,53 @@
             "name": "@First"
           }
         ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 784345333,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CargoStepDefinition.inicalizar()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Editar Cargo",
+        "description": "",
+        "id": "caso-de-teste-de-cargo;editar-cargo",
+        "after": [
+          {
+            "result": {
+              "duration": 325712844,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CargoStepDefinition.finaliza()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "tags": [
+          {
+            "line": 12,
+            "name": "@Second"
+          }
+        ]
       }
     ],
-    "name": "Test Cargo",
+    "name": "Caso de Teste de Cargo",
     "description": "",
-    "id": "test-cargo",
+    "id": "caso-de-teste-de-cargo",
     "keyword": "Feature",
     "uri": "cargo.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@ready_for_testing"
+        "name": "@funtional_test_cargo"
       }
     ]
   }

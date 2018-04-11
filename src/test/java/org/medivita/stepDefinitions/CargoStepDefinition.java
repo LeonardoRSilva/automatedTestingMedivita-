@@ -31,7 +31,7 @@ public class CargoStepDefinition {
 	@Rule
 	public TestName testName = new TestName();
 
-	@Before
+	@Before("@First")
 	public void inicalizar() {
 		page.acessarTelaInicial();
 		page.logar("admin@admin.com", "leonardo1900");
@@ -59,11 +59,12 @@ public class CargoStepDefinition {
 		cargoPage.esperarToastFechar(
 				"//MD-TOAST[@class='ng-scope _md md-default-theme md-bottom ng-animate ng-leave ng-leave-active']");
 		cargoPage.esperarToastFechar("//div[@class='md-toast-content']");
+		cargoPage.clicarBotaoNovoCargo("//BUTTON[@class='md-fab md-fab-bottom-right md-button md-ink-ripple']");
 	}
 
 	@Given("^clicar botao novo cargo$")
 	public void clicar_botao_novo_cargo() throws Throwable {
-		cargoPage.clicarBotaoNovoCargo("//BUTTON[@class='md-fab md-fab-bottom-right md-button md-ink-ripple']");
+
 	}
 
 	@Given("^preencher_campos e enviar$")

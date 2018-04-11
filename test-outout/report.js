@@ -1,26 +1,26 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("cargo.feature");
 formatter.feature({
   "line": 2,
-  "name": "Test Cargo",
+  "name": "Caso de Teste de Cargo",
   "description": "",
-  "id": "test-cargo",
+  "id": "caso-de-teste-de-cargo",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@ready_for_testing"
+      "name": "@funtional_test_cargo"
     }
   ]
 });
 formatter.before({
-  "duration": 19244473908,
+  "duration": 16780088920,
   "status": "passed"
 });
 formatter.scenario({
   "line": 5,
   "name": "Novo Cargo",
   "description": "",
-  "id": "test-cargo;novo-cargo",
+  "id": "caso-de-teste-de-cargo;novo-cargo",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -54,32 +54,54 @@ formatter.match({
   "location": "CargoStepDefinition.abrir_menu_esquerdo_link_de_cargo()"
 });
 formatter.result({
-  "duration": 4223833622,
+  "duration": 4331933849,
   "status": "passed"
 });
 formatter.match({
   "location": "CargoStepDefinition.esperar_toast_fechar()"
 });
 formatter.result({
-  "duration": 4031065781,
+  "duration": 5088401787,
   "status": "passed"
 });
 formatter.match({
   "location": "CargoStepDefinition.clicar_botao_novo_cargo()"
 });
 formatter.result({
-  "duration": 250305495,
+  "duration": 31999,
   "status": "passed"
 });
 formatter.match({
   "location": "CargoStepDefinition.preencher_campos_e_enviar()"
 });
 formatter.result({
-  "duration": 1635620808,
+  "duration": 2094488759,
   "status": "passed"
 });
 formatter.after({
-  "duration": 509266303,
+  "duration": 619167506,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 784345333,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "Editar Cargo",
+  "description": "",
+  "id": "caso-de-teste-de-cargo;editar-cargo",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@Second"
+    }
+  ]
+});
+formatter.after({
+  "duration": 325712844,
   "status": "passed"
 });
 });

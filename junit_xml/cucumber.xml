@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="29.894566">
-<testcase classname="Test Cargo" name="Novo Cargo" time="29.894566">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="30.024171">
+<testcase classname="Caso de Teste de Cargo" name="Novo Cargo" time="28.914113">
 <system-out><![CDATA[Given abrir menu esquerdo e selecionar item cargo...........................passed
 When esperar toast fechar...................................................passed
 Then clicar botao novo cargo................................................passed
 Then preencher_campos e enviar..............................................passed
 ]]></system-out>
+</testcase>
+<testcase classname="Caso de Teste de Cargo" name="Editar Cargo" time="1.110058">
+<system-out/>
+<failure message="The scenario has no steps"/>
 </testcase>
 </testsuite>
