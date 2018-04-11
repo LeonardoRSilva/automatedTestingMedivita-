@@ -1,0 +1,6 @@
+[0308/200244.652:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0308/200246.543:ERROR:process_info.cc(350)] VirtualQueryEx: Acesso negado. (0x5)
+[0308/200246.543:ERROR:process_info.cc(571)] ReadMemoryInfo failed
+[0308/200246.606:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0308/200246.606:ERROR:exception_snapshot_win.cc(88)] thread ID 12144 not found in process
+[0308/200246.606:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed

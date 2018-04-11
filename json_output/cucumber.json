@@ -1,0 +1,104 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 19244473908,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CargoStepDefinition.inicalizar()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Novo Cargo",
+        "description": "",
+        "id": "test-cargo;novo-cargo",
+        "after": [
+          {
+            "result": {
+              "duration": 509266303,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CargoStepDefinition.finaliza()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4223833622,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "abrir menu esquerdo e selecionar item cargo",
+            "match": {
+              "location": "CargoStepDefinition.abrir_menu_esquerdo_link_de_cargo()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4031065781,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "esperar toast fechar",
+            "match": {
+              "location": "CargoStepDefinition.esperar_toast_fechar()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 250305495,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "clicar botao novo cargo",
+            "match": {
+              "location": "CargoStepDefinition.clicar_botao_novo_cargo()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1635620808,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "preencher_campos e enviar",
+            "match": {
+              "location": "CargoStepDefinition.preencher_campos_e_enviar()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@First"
+          }
+        ]
+      }
+    ],
+    "name": "Test Cargo",
+    "description": "",
+    "id": "test-cargo",
+    "keyword": "Feature",
+    "uri": "cargo.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@ready_for_testing"
+      }
+    ]
+  }
+]
