@@ -49,6 +49,7 @@ public class CargoStepDefinition {
 		}
 	}
 
+	/********** Novo Cargo ********/
 	@Given("^abrir menu esquerdo e selecionar item cargo$")
 	public void abrir_menu_esquerdo_link_de_cargo() throws Throwable {
 		menuEsquerdoPage.abrirCargo("cargos");
@@ -73,6 +74,7 @@ public class CargoStepDefinition {
 				"//BUTTON[@class='md-primary md-raised md-button md-ink-ripple']");
 	}
 
+	/************** Editar Cargo ****************/
 	/*
 	 * @After(order = 0) public void tearDown() {
 	 * System.out.println("close the browser"); }
