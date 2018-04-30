@@ -30,7 +30,7 @@ Feature: Caso de Teste de Gerar Horarios de Agendamento
 		And   prencher os campos nome (medico) <nome> e selecionar combo (medico) <nome>
 		And   prencher os campos periodo inicial <periodoinicial> e periodo final <periodofinal>
 		And   clicar no botao salvar "salvar"
-		Then  validar mensagem de sucesso
+		Then  validar mensagem de sucesso para gerar horarios
 
     Examples: 
       | nome                | periodoinicial | periodofinal  |

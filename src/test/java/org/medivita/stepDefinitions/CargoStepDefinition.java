@@ -1,23 +1,11 @@
 package org.medivita.stepDefinitions;
 
-import static org.medivita.core.DriverFactory.getDriver;
-import static org.medivita.core.DriverFactory.killDriver;
-
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
 import org.junit.rules.TestName;
-import org.medivita.core.Propriedades;
 import org.medivita.pages.CargoPage;
 import org.medivita.pages.LoginPage;
 import org.medivita.pages.MenuEsquerdoPage;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -31,24 +19,18 @@ public class CargoStepDefinition {
 	@Rule
 	public TestName testName = new TestName();
 
-	@Before("@First")
-	public void inicalizar() {
-		page.acessarTelaInicial();
-		page.logar("admin@admin.com", "admin");
-	}
-
-	@After
-	public void finaliza() throws IOException {
-		TakesScreenshot ss = (TakesScreenshot) getDriver();
-		File arquivo = ss.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(arquivo, new File(
-				"target" + File.separator + "screenshot" + File.separator + testName.getMethodName() + ".jpg"));
-
-		if (Propriedades.FECHAR_BROWSER) {
-			killDriver();
-		}
-	}
-
+	/*
+	 * @Before("@First") public void inicalizar() { page.acessarTelaInicial();
+	 * page.logar("admin@admin.com", "admin"); }
+	 * 
+	 * @After public void finaliza() throws IOException { TakesScreenshot ss =
+	 * (TakesScreenshot) getDriver(); File arquivo =
+	 * ss.getScreenshotAs(OutputType.FILE); FileUtils.copyFile(arquivo, new
+	 * File( "target" + File.separator + "screenshot" + File.separator +
+	 * testName.getMethodName() + ".jpg"));
+	 * 
+	 * if (Propriedades.FECHAR_BROWSER) { killDriver(); } }
+	 */
 	/********** Novo Cargo ********/
 	@Given("^abrir menu esquerdo e selecionar item cargo$")
 	public void abrir_menu_esquerdo_link_de_cargo() throws Throwable {

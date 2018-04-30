@@ -18,12 +18,12 @@
 #Sample Feature Definition Template
 
 
-@funtional_test_gerar_horarios_de_agendamento
-Feature: Caso de Teste de Gerar Horarios de Agendamento
+@funtional_test_agenda
+Feature: Caso de Teste de Agenda
 
 
   @First
-  Scenario Outline: Gerar Horarios de Agendamento
+  Scenario Outline: Novo Agendamento
     Given  abrir menu esquerdo e selecionar item compromissos "Compromissos" 
     Then  aguardar mensagem de carregamento fechar 
     When  fechar Selecionar a aba "Agendamentos"   
