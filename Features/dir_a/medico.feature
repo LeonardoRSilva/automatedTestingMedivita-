@@ -22,22 +22,22 @@
 Feature: Caso de Teste de Medico
 
 
-  @First
-  Scenario Outline: Novo Médico
+  @NovoMedico
+  Scenario Outline: A - Novo Médico
     Given eu quero abrir menu esquerdo e selecionar item medicos "Medicos"  
     Then aguardar mensagem de carregamento fechar 
     When fechar clicar botao "Novo Medico"   
 		Then preencher os campos tipo registro <tiporegistro> e estado registro <estadoregistro> e registro profissional<registroprofissional> 
 		And prencher os campos nome <nome> e rg <rg> e cpf <cpf> 
 		And prencher os campos data de nascimento <datanascimento> e cargo <cargo> e setor <setor> e especialidade <especialidade>
-		And prencher os campos data admissao <dataadmissao> e sexo <sexo> e cep <cep> e numero <numero> 
-		And clicar no botao proximo "proximo"
-		And prencher os campos email <email> e senha <senha> e clicar em salvar "salvar"
+		And prencher os campos data admissao <dataadmissao> e telefone <telefone> e sexo <sexo> e cep <cep> e numero <numero> 
+		And clicar no botao proximo "Proximo"
+		And prencher os campos email <email> e senha <senha> e status <status> e clicar em salvar "salvar"
 		Then validar mensagem de sucesso
 
     Examples: 
-      | tiporegistro | estadoregistro | registroprofissional | nome                | rg             | cpf              | datanascimento | cargo    | setor      | especialidade | dataadmissao  | sexo        | cep        | numero | email                   | senha          |  
-			| "CRM"        | "Minas Gerais" | "15498768"           | "João Médico Teste" | "36.596.765-8" | "330.274.097-27" | "15/10/1986"   | "Médico" | "Cirurgia" | "Pediatra"    | "28/04/2018" | "Masculino"  | "38405211" | "1057" | "joao.medico@gmail.com" | "joamed123456" | 
+      | tiporegistro | estadoregistro | registroprofissional | nome                | rg             | cpf              | datanascimento | cargo    | setor      | especialidade | dataadmissao | telefone     | sexo        | cep        | numero | email                   | senha          |status   |  
+			| "CRM"        | "Minas Gerais" | "15498768"           | "Leonardo Medico Teste" | "36.596.765-8" | "330.274.097-27" | "01/01/1988"   | "Medico" | "Cirurgia" | "Pediatra"    | "02/04/2018" | "68984606843"| "Masculino" | "38405211" | "1057" | "leonardo.rsil@gmail.com" | "leonardo123456" | "Ativo" |
       
       
 

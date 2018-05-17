@@ -22,8 +22,8 @@
 Feature: Caso de Teste de Agenda
 
 
-  @First
-  Scenario Outline: Novo Agendamento
+   @fourth
+  Scenario Outline: E - Novo Agendamento
     Given  abrir menu esquerdo e selecionar item compromissos "Compromissos" 
     Then  aguardar mensagem de carregamento fechar 
     When  fechar Selecionar a aba "Agendamentos"   

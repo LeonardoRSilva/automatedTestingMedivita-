@@ -22,8 +22,8 @@
 Feature: Caso de Teste de Gerar Horarios de Agendamento
 
 
-  @First
-  Scenario Outline: Gerar Horarios de Agendamento
+  @Third
+  Scenario Outline: C - Gerar Horarios de Agendamento
     Given eu quero abrir menu esquerdo e selecionar item agendas "Agendas" 
     Then  aguardar mensagem de carregamento fechar 
     When  fechar clicar botao "Gerar Horários para Agendamentos"   

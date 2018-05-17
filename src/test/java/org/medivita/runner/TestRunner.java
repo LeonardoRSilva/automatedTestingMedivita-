@@ -6,7 +6,12 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "Features" }, // the path of the feature files
+@CucumberOptions(features = { "Features" }, // the
+		// path
+		// of
+		// the
+		// feature
+		// files
 		glue = { "org.medivita.stepDefinitions" }, // the path of
 													// the step
 		// definition files
@@ -23,7 +28,7 @@ import cucumber.api.junit.Cucumber;
 						// definition file
 		dryRun = false // to check the mapping is proper between feature file
 						// and step def file
-// tags = {"~@SmokeTest" , "~@RegressionTest", "~@End2End"}
+// tags = { "@novo_medico" }
 )
 
 public class TestRunner {

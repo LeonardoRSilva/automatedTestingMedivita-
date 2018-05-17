@@ -8,6 +8,7 @@ import java.util.List;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,12 +23,27 @@ public class BasePage {
 		getDriver().findElement(by).sendKeys(texto);
 	}
 
+	public void escreverByPlacehoder(By by, String texto) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).clear();
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(texto);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(Keys.TAB);
+		// getDriver().findElement(by).click();
+	}
 	/*
 	 * public void escrever(String name_field, String texto){
 	 * getDriver().findElement(By.name(name_field)).clear();
 	 * getDriver().findElement(By.name(name_field));
 	 * getDriver().findElement(By.name(name_field)).sendKeys(texto); }
 	 */
+
+	public void scroll() {
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		WebElement element = getDriver().findElement(By.xpath("//DIV[@class='md-virtual-repeat-offsetter']"));
+
+		js.executeScript("$(\".md-virtual-repeat-offsetter\").animate({ scrollTop: \"" + 600 + "px\" })");
+
+	}
 
 	public void escrever(String id_campo, String texto) {
 		escrever(By.id(id_campo), texto);
@@ -44,6 +60,12 @@ public class BasePage {
 	}
 
 	/********* Radio e Check ************/
+
+	public void clicarRadioByValue(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+		// getDriver().findElement(by).click();
+	}
 
 	public void clicarRadio(By by) {
 		getDriver().findElement(by).click();
@@ -66,6 +88,11 @@ public class BasePage {
 	}
 
 	/********* Combo ************/
+	public void clicarComboBox(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+		// getDriver().findElement(by).click();
+	}
 
 	public void selecionarCombo(String id, String valor) {
 		WebElement element = getDriver().findElement(By.id(id));
@@ -126,8 +153,10 @@ public class BasePage {
 		getDriver().findElement(by).click();
 	}
 
-	public void clicarComboBox(By by) {
-		getDriver().findElement(by).click();
+	public void clicarDatePicker(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.elementToBeClickable(by)).click();
+		// getDriver().findElement(by).click();
 	}
 
 	public void esperarElementoEClicarBotao(By by) {

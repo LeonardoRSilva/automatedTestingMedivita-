@@ -22,8 +22,8 @@
 Feature: Caso de Teste de Escala de Atendimento
 
 
-  @First
-  Scenario Outline: Cadastrar Escala de Atendimento
+  @Second
+  Scenario Outline: B - Cadastrar Escala de Atendimento
     Given eu quero abrir menu esquerdo e selecionar item escala "escala" 
     Then aguardar mensagem de carregamento fechar 
     When fechar clicar botao "Nova Escala de Atendimento"   

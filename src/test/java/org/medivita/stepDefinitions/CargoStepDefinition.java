@@ -34,7 +34,7 @@ public class CargoStepDefinition {
 	/********** Novo Cargo ********/
 	@Given("^abrir menu esquerdo e selecionar item cargo$")
 	public void abrir_menu_esquerdo_link_de_cargo() throws Throwable {
-		menuEsquerdoPage.abrirCargo("cargos");
+		menuEsquerdoPage.abrirItemMenu("cargos");
 	}
 
 	@Given("^esperar toast fechar$")
