@@ -33,8 +33,8 @@ public class MedicoStepDefinition {
 	 */
 	@After("@NovoMedico")
 	public void afterNovoMedico() throws InterruptedException {
-		Thread.sleep(5000);
 		medicoPage.logoff("Sair");
+		Thread.sleep(65000);
 	}
 
 	@Given("^eu quero abrir menu esquerdo e selecionar item medicos \"([^\"]*)\"$")

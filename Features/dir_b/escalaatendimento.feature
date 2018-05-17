@@ -22,13 +22,12 @@
 Feature: Caso de Teste de Escala de Atendimento
 
 
-  @Second
+  @EscalaAtendimento
   Scenario Outline: B - Cadastrar Escala de Atendimento
-    Given eu quero abrir menu esquerdo e selecionar item escala "escala" 
-    Then aguardar mensagem de carregamento fechar 
-    When fechar clicar botao "Nova Escala de Atendimento"   
+    Given eu quero abrir menu esquerdo e selecionar item escalas "escalas"  
+    When clicar botao nova escala "Nova Escala"   
 		Then selecionar os dias da semana (segunda) <dia1> e dia da semana (quarta) <dia2>
-		And  clicar no botao proximo "proximo"
+		And  clicar no botao proxima etapa "Proximo"
 		And  prencher os campos periodo (segunda)  <periodo1> e intervalo (segunda) <intervalo1>
 		And  prencher os campos quantidade de vagas (segunda) <quantidadevagas1> e ordem de atendimento (segunda) <ordematendimento1>
 		And  prencher os campos hora de entrada (segunda) <horaentrada1> e hora de saida (segunda) <horasaida1>  
@@ -40,7 +39,7 @@ Feature: Caso de Teste de Escala de Atendimento
 
     Examples: 
       | dia1            | dia2           | periodo1 | intervalo1 | quantidadevagas1 | ordematendimento1| horaentrada1 | horasaida1 |  periodo2 | intervalo2 | quantidadevagas2 | ordematendimento2| horaentrada2 | horasaida2 |  
-			| "Segunda-Feira" | "Quarta-Feira" | "Manhã"  | "45"       | "2"              | "Agendamento"    | "08:00:00"   | "13:00:00" |  "Tarde"  | "60"       | "2"              | "Agendamento"    | "13:30:00"   | "18:30:00" | 
+			| "Segunda-Feira" | "Quarta-Feira" | "Manha"  | "45"       | "2"              | "Agendamento"    | "08:00:00"   | "13:00:00" |  "Tarde"  | "60"       | "2"              | "Agendamento"    | "13:30:00"   | "18:30:00" | 
       
       
 

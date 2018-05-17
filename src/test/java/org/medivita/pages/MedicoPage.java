@@ -113,33 +113,24 @@ public class MedicoPage extends BasePage {
 	}
 
 	public void salvarMedico(String text) {
-		esperarElementoEClicarBotao(By.xpath("//BUTTON[@type='" + text + "']"));
+		esperarEClicarBotao(By.xpath("//BUTTON[@type='" + text + "']"));
 	}
 
-	public void logoff(String text) {
-		esperarElementoEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));
+	/********
+	 * logoff
+	 * 
+	 * @throws InterruptedException
+	 **********/
+	public void logoff(String text) throws InterruptedException {
+		esperarEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));
+		Thread.sleep(15000);
+		fecharBrowser();
 	}
 
-	public void setDescricao(String descricao) {
-		escreverByCssSeletor("descricao", descricao);
-	}
-
+	/******** selecionar comboBox **********/
 	public void selecionar_item_combobox(By elCombo, By item) {
 		clicarComboBox(elCombo);
 		clicarComboBox(item);
-	}
-
-	public void enviar(String text) {
-		clicarBotao(By.xpath(text));
-	}
-
-	public void preencherCamposEEnviar(String nome, String descricao, String elComboBox, String itemComboBox,
-			String btnEnviar) {
-		// setNome(nome);
-		setDescricao(descricao);
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//MD-OPTION[@value='" + itemComboBox + "']"));
-		enviar(btnEnviar);
 	}
 
 }

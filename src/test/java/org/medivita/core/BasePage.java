@@ -60,6 +60,11 @@ public class BasePage {
 	}
 
 	/********* Radio e Check ************/
+	public void esperarclicarCheckBox(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+		// getDriver().findElement(by).click();
+	}
 
 	public void clicarRadioByValue(By by) {
 		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
@@ -164,9 +169,20 @@ public class BasePage {
 		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
 	}
 
+	public void esperarEClicarBotao(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 2500);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
+	}
+
 	public void esperarElementofechar(By by) {
 		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
 		System.out.println(some_element.until(ExpectedConditions.invisibilityOfElementLocated(by)));
+
+	}
+
+	public void esperarElementoText(By by) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 300);
+		System.out.println(some_element.until(ExpectedConditions.visibilityOfElementLocated(by)));
 
 	}
 
@@ -296,5 +312,9 @@ public class BasePage {
 			}
 		}
 		return idColuna;
+	}
+
+	public void fecharBrowser() {
+		DriverFactory.killDriver();
 	}
 }
