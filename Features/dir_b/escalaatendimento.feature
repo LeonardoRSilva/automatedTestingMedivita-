@@ -23,7 +23,7 @@ Feature: Caso de Teste de Escala de Atendimento
 
 
   @EscalaAtendimento
-  Scenario Outline: B - Cadastrar Escala de Atendimento
+  Scenario Outline: Cadastrar Escala de Atendimento
     Given eu quero abrir menu esquerdo e selecionar item escalas "escalas"  
     When clicar botao nova escala "Nova Escala"   
 		Then selecionar os dias da semana (segunda) <dia1> e dia da semana (quarta) <dia2>
@@ -31,10 +31,11 @@ Feature: Caso de Teste de Escala de Atendimento
 		And  prencher os campos periodo (segunda)  <periodo1> e intervalo (segunda) <intervalo1>
 		And  prencher os campos quantidade de vagas (segunda) <quantidadevagas1> e ordem de atendimento (segunda) <ordematendimento1>
 		And  prencher os campos hora de entrada (segunda) <horaentrada1> e hora de saida (segunda) <horasaida1>  
-		And  clicar no botao proximo "proximo"
+		And  clicar no botao proxima etapa "Proximo"
 		And  prencher os campos periodo (quarta) <periodo2> e intervalo (quarta) <intervalo2>
 		And  prencher os campos quantidade de vagas (quarta) <quantidadevagas2> e ordem de atendimento (quarta) <ordematendimento2>
 		And  prencher os campos hora de entrada (quarta) <horaentrada2> e hora de saida (quarta) <horasaida2>  
+		And  salvar escala "Save"
 		Then validar mensagem de sucesso
 
     Examples: 

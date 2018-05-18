@@ -55,6 +55,12 @@ public class BasePage {
 		// getDriver().findElement(By.xpath("//INPUT[@id='input_0']")).sendKeys(texto);;
 	}
 
+	public void escreverBy(By by, String texto) {
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(texto);
+		// getDriver().findElement(By.xpath("//INPUT[@id='input_0']")).sendKeys(texto);;
+	}
+
 	public String obterValorCampo(String id_campo) {
 		return getDriver().findElement(By.id(id_campo)).getAttribute("value");
 	}
@@ -197,7 +203,8 @@ public class BasePage {
 	/**** Menu esquerdo *****/
 
 	public void selecionarItemMenu(By by) {
-		getDriver().findElement(by).click();
+		WebDriverWait some_element = new WebDriverWait(getDriver(), 100);
+		some_element.until(ExpectedConditions.visibilityOfElementLocated(by)).click();
 	}
 
 	public void fecharMenuEsquerdo(By by) {

@@ -30,12 +30,6 @@ public class AgendamentoStepDefinition {
 		Thread.sleep(9000);
 	}
 
-	@Given("^eu quero abrir menu esquerdo e selecionar item agendas \"([^\"]*)\"$")
-	public void eu_quero_abrir_menu_esquerdo_e_selecionar_item_agendas(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(5000);
-	}
-
 	@When("^prencher os campos nome \\(medico\\) \"([^\"]*)\" e selecionar combo \\(medico\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_nome_medico_e_selecionar_combo_medico(String arg1, String arg2) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions

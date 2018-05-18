@@ -28,40 +28,46 @@ public class EscalaAtendimentoPage extends BasePage {
 	/************ preencher periodo e intervalo *******/
 	public void setPeriodo(String elComboBox, String itemComboBox) {
 
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//md-option[@id='select_option_32']"));
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"), By.xpath("//md-option[@class='"
+				+ elComboBox + " ng-binding ng-scope md-ink-ripple'][@value='" + itemComboBox + "']"));
+		// By.xpath("//md-option[@id='select_option_32']"
 	}
 
 	public void setIntervalo(String elComboBox, String itemComboBox) {
 
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//md-option[@id='select_option_39']"));
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"), By.xpath("//md-option[@class='"
+				+ elComboBox + " ng-binding ng-scope md-ink-ripple'][@value='" + itemComboBox + "']"));
 	}
 
 	/************ preencher quantidadeVagas e ordemAtendimento *******/
 	public void setQuantidadeVagas(String elComboBox, String itemComboBox) {
 
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//md-option[@id='select_option_43']"));
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"), By.xpath("//md-option[@class='"
+				+ elComboBox + " ng-binding ng-scope md-ink-ripple'][@value='" + itemComboBox + "']"));
 	}
 
 	public void setOrdemAtendimento(String elComboBox, String itemComboBox) {
 
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//md-option[@id='select_option_48']"));
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"), By.xpath("//md-option[@class='"
+				+ elComboBox + " ng-binding ng-scope md-ink-ripple'][@value='" + itemComboBox + "']"));
 	}
 
 	/************ preencher quantidadeVagas e ordemAtendimento *******/
 	public void setHoraEntrada(String elComboBox, String itemComboBox) {
 
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//md-option[@id='select_option_82']"));
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"), By.xpath("//md-option[@class='"
+				+ elComboBox + " ng-binding ng-scope md-ink-ripple'][@value='" + itemComboBox + "']"));
 	}
 
 	public void setHoraSaida(String elComboBox, String itemComboBox) {
 
-		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"),
-				By.xpath("//md-option[@id='select_option_198']"));
+		selecionar_item_combobox(By.xpath("//MD-SELECT[@name='" + elComboBox + "']"), By.xpath("//md-option[@class='"
+				+ elComboBox + " ng-binding ng-scope md-ink-ripple'][@value='" + itemComboBox + "']"));
+	}
+
+	/************ salvar escala *******/
+	public void salvarEscala(String text) {
+		esperarElementoEClicarBotao(By.xpath("//BUTTON[contains(.,'" + text + "')]"));
 	}
 
 	/******** * logoff **********/

@@ -22,19 +22,18 @@
 Feature: Caso de Teste de Gerar Horarios de Agendamento
 
 
-  @Third
-  Scenario Outline: C - Gerar Horarios de Agendamento
-    Given eu quero abrir menu esquerdo e selecionar item agendas "Agendas" 
-    Then  aguardar mensagem de carregamento fechar 
-    When  fechar clicar botao "Gerar Horários para Agendamentos"   
-		And   prencher os campos nome (medico) <nome> e selecionar combo (medico) <nome>
-		And   prencher os campos periodo inicial <periodoinicial> e periodo final <periodofinal>
+  @GerarHorariosAgendamento
+  Scenario Outline: Gerar Horarios de Agendamento
+    Given eu quero abrir menu esquerdo e selecionar item agendas "agendas"  
+    Then  clicar botao (Gerar Horarios) "Gerar Horarios"   
+		And   para gerar preencher os campos nome (medico) <nome> e selecionar combo (medico) <nome>
+		And   para gerar preencher os campos periodo inicial <periodoinicial> e periodo final <periodofinal>
 		And   clicar no botao salvar "salvar"
 		Then  validar mensagem de sucesso para gerar horarios
 
     Examples: 
-      | nome                | periodoinicial | periodofinal  |
-			| "João Médico Teste" | "29/04/2018"   | "05/05/2018"  | 
+      | nome                    | periodoinicial | periodofinal  |
+			| "Leonardo Medico Teste" | "29/04/2018"   | "05/05/2018"  | 
       
 
       

@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Features/dir_b/escalaatendimento.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Features/dir_c/gerarhorariosagendamento.feature");
 formatter.feature({
   "comments": [
     {
@@ -75,428 +75,223 @@ formatter.feature({
     }
   ],
   "line": 22,
-  "name": "Caso de Teste de Escala de Atendimento",
+  "name": "Caso de Teste de Gerar Horarios de Agendamento",
   "description": "",
-  "id": "caso-de-teste-de-escala-de-atendimento",
+  "id": "caso-de-teste-de-gerar-horarios-de-agendamento",
   "keyword": "Feature",
   "tags": [
     {
       "line": 21,
-      "name": "@funtional_test_escala_atendimento"
+      "name": "@funtional_test_gerar_horarios_de_agendamento"
     }
   ]
 });
 formatter.scenarioOutline({
   "line": 26,
-  "name": "B - Cadastrar Escala de Atendimento",
+  "name": "Gerar Horarios de Agendamento",
   "description": "",
-  "id": "caso-de-teste-de-escala-de-atendimento;b---cadastrar-escala-de-atendimento",
+  "id": "caso-de-teste-de-gerar-horarios-de-agendamento;gerar-horarios-de-agendamento",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 25,
-      "name": "@EscalaAtendimento"
+      "name": "@GerarHorariosAgendamento"
     }
   ]
 });
 formatter.step({
   "line": 27,
-  "name": "eu quero abrir menu esquerdo e selecionar item escalas \"escalas\"",
+  "name": "eu quero abrir menu esquerdo e selecionar item agendas \"agendas\"",
   "keyword": "Given "
 });
 formatter.step({
   "line": 28,
-  "name": "clicar botao nova escala \"Nova Escala\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 29,
-  "name": "selecionar os dias da semana (segunda) \u003cdia1\u003e e dia da semana (quarta) \u003cdia2\u003e",
+  "name": "clicar botao (Gerar Horarios) \"Gerar Horarios\"",
   "keyword": "Then "
 });
 formatter.step({
+  "line": 29,
+  "name": "para gerar preencher os campos nome (medico) \u003cnome\u003e e selecionar combo (medico) \u003cnome\u003e",
+  "keyword": "And "
+});
+formatter.step({
   "line": 30,
-  "name": "clicar no botao proxima etapa \"Proximo\"",
+  "name": "para gerar preencher os campos periodo inicial \u003cperiodoinicial\u003e e periodo final \u003cperiodofinal\u003e",
   "keyword": "And "
 });
 formatter.step({
   "line": 31,
-  "name": "prencher os campos periodo (segunda)  \u003cperiodo1\u003e e intervalo (segunda) \u003cintervalo1\u003e",
+  "name": "clicar no botao salvar \"salvar\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 32,
-  "name": "prencher os campos quantidade de vagas (segunda) \u003cquantidadevagas1\u003e e ordem de atendimento (segunda) \u003cordematendimento1\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 33,
-  "name": "prencher os campos hora de entrada (segunda) \u003choraentrada1\u003e e hora de saida (segunda) \u003chorasaida1\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 34,
-  "name": "clicar no botao proximo \"proximo\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 35,
-  "name": "prencher os campos periodo (quarta) \u003cperiodo2\u003e e intervalo (quarta) \u003cintervalo2\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 36,
-  "name": "prencher os campos quantidade de vagas (quarta) \u003cquantidadevagas2\u003e e ordem de atendimento (quarta) \u003cordematendimento2\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 37,
-  "name": "prencher os campos hora de entrada (quarta) \u003choraentrada2\u003e e hora de saida (quarta) \u003chorasaida2\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 38,
-  "name": "validar mensagem de sucesso",
+  "name": "validar mensagem de sucesso para gerar horarios",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 40,
+  "line": 34,
   "name": "",
   "description": "",
-  "id": "caso-de-teste-de-escala-de-atendimento;b---cadastrar-escala-de-atendimento;",
+  "id": "caso-de-teste-de-gerar-horarios-de-agendamento;gerar-horarios-de-agendamento;",
   "rows": [
     {
       "cells": [
-        "dia1",
-        "dia2",
-        "periodo1",
-        "intervalo1",
-        "quantidadevagas1",
-        "ordematendimento1",
-        "horaentrada1",
-        "horasaida1",
-        "periodo2",
-        "intervalo2",
-        "quantidadevagas2",
-        "ordematendimento2",
-        "horaentrada2",
-        "horasaida2"
+        "nome",
+        "periodoinicial",
+        "periodofinal"
       ],
-      "line": 41,
-      "id": "caso-de-teste-de-escala-de-atendimento;b---cadastrar-escala-de-atendimento;;1"
+      "line": 35,
+      "id": "caso-de-teste-de-gerar-horarios-de-agendamento;gerar-horarios-de-agendamento;;1"
     },
     {
       "cells": [
-        "\"Segunda-Feira\"",
-        "\"Quarta-Feira\"",
-        "\"Manha\"",
-        "\"45\"",
-        "\"2\"",
-        "\"Agendamento\"",
-        "\"08:00:00\"",
-        "\"13:00:00\"",
-        "\"Tarde\"",
-        "\"60\"",
-        "\"2\"",
-        "\"Agendamento\"",
-        "\"13:30:00\"",
-        "\"18:30:00\""
+        "\"Leonardo Medico Teste\"",
+        "\"29/04/2018\"",
+        "\"05/05/2018\""
       ],
-      "line": 42,
-      "id": "caso-de-teste-de-escala-de-atendimento;b---cadastrar-escala-de-atendimento;;2"
+      "line": 36,
+      "id": "caso-de-teste-de-gerar-horarios-de-agendamento;gerar-horarios-de-agendamento;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 76052915467,
+  "duration": 18800832689,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 42,
-  "name": "B - Cadastrar Escala de Atendimento",
+  "line": 36,
+  "name": "Gerar Horarios de Agendamento",
   "description": "",
-  "id": "caso-de-teste-de-escala-de-atendimento;b---cadastrar-escala-de-atendimento;;2",
+  "id": "caso-de-teste-de-gerar-horarios-de-agendamento;gerar-horarios-de-agendamento;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 21,
-      "name": "@funtional_test_escala_atendimento"
+      "name": "@funtional_test_gerar_horarios_de_agendamento"
     },
     {
       "line": 25,
-      "name": "@EscalaAtendimento"
+      "name": "@GerarHorariosAgendamento"
     }
   ]
 });
 formatter.step({
   "line": 27,
-  "name": "eu quero abrir menu esquerdo e selecionar item escalas \"escalas\"",
+  "name": "eu quero abrir menu esquerdo e selecionar item agendas \"agendas\"",
   "keyword": "Given "
 });
 formatter.step({
   "line": 28,
-  "name": "clicar botao nova escala \"Nova Escala\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 29,
-  "name": "selecionar os dias da semana (segunda) \"Segunda-Feira\" e dia da semana (quarta) \"Quarta-Feira\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "name": "clicar botao (Gerar Horarios) \"Gerar Horarios\"",
   "keyword": "Then "
 });
 formatter.step({
+  "line": 29,
+  "name": "para gerar preencher os campos nome (medico) \"Leonardo Medico Teste\" e selecionar combo (medico) \"Leonardo Medico Teste\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
   "line": 30,
-  "name": "clicar no botao proxima etapa \"Proximo\"",
+  "name": "para gerar preencher os campos periodo inicial \"29/04/2018\" e periodo final \"05/05/2018\"",
+  "matchedColumns": [
+    1,
+    2
+  ],
   "keyword": "And "
 });
 formatter.step({
   "line": 31,
-  "name": "prencher os campos periodo (segunda)  \"Manha\" e intervalo (segunda) \"45\"",
-  "matchedColumns": [
-    2,
-    3
-  ],
+  "name": "clicar no botao salvar \"salvar\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 32,
-  "name": "prencher os campos quantidade de vagas (segunda) \"2\" e ordem de atendimento (segunda) \"Agendamento\"",
-  "matchedColumns": [
-    4,
-    5
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 33,
-  "name": "prencher os campos hora de entrada (segunda) \"08:00:00\" e hora de saida (segunda) \"13:00:00\"",
-  "matchedColumns": [
-    6,
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 34,
-  "name": "clicar no botao proximo \"proximo\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 35,
-  "name": "prencher os campos periodo (quarta) \"Tarde\" e intervalo (quarta) \"60\"",
-  "matchedColumns": [
-    8,
-    9
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 36,
-  "name": "prencher os campos quantidade de vagas (quarta) \"2\" e ordem de atendimento (quarta) \"Agendamento\"",
-  "matchedColumns": [
-    10,
-    11
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 37,
-  "name": "prencher os campos hora de entrada (quarta) \"13:30:00\" e hora de saida (quarta) \"18:30:00\"",
-  "matchedColumns": [
-    12,
-    13
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 38,
-  "name": "validar mensagem de sucesso",
+  "name": "validar mensagem de sucesso para gerar horarios",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "escalas",
+      "val": "agendas",
       "offset": 56
     }
   ],
-  "location": "EscalaAtendimentoStepDefinitions.eu_quero_abrir_menu_esquerdo_e_selecionar_item_escalas(String)"
+  "location": "GerarHorariosAgendamentoStepDefinition.eu_quero_abrir_menu_esquerdo_e_selecionar_item_agendas(String)"
 });
 formatter.result({
-  "duration": 8190975662,
+  "duration": 4628000853,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Nova Escala",
-      "offset": 26
-    }
-  ],
-  "location": "EscalaAtendimentoStepDefinitions.clicar_botao_nova_escala(String)"
-});
-formatter.result({
-  "duration": 2296738977,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Segunda-Feira",
-      "offset": 40
-    },
-    {
-      "val": "Quarta-Feira",
-      "offset": 81
-    }
-  ],
-  "location": "EscalaAtendimentoStepDefinitions.selecionar_os_dias_da_semana_segunda_e_dia_da_semana_quarta(String,String)"
-});
-formatter.result({
-  "duration": 10366467007,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Proximo",
+      "val": "Gerar Horarios",
       "offset": 31
     }
   ],
-  "location": "EscalaAtendimentoStepDefinitions.clicar_no_botao_proxima_etapa(String)"
+  "location": "GerarHorariosAgendamentoStepDefinition.clicar_botao_Gerar_Horarios(String)"
 });
 formatter.result({
-  "duration": 1689043972,
+  "duration": 2622499503,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Manha",
-      "offset": 39
-    },
-    {
-      "val": "45",
-      "offset": 69
-    }
-  ],
-  "location": "EscalaAtendimentoStepDefinitions.prencher_os_campos_periodo_segunda_e_intervalo_segunda(String,String)"
-});
-formatter.result({
-  "duration": 17846561747,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 50
-    },
-    {
-      "val": "Agendamento",
-      "offset": 87
-    }
-  ],
-  "location": "EscalaAtendimentoStepDefinitions.prencher_os_campos_quantidade_de_vagas_segunda_e_ordem_de_atendimento_segunda(String,String)"
-});
-formatter.result({
-  "duration": 9032836631,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "08:00:00",
+      "val": "Leonardo Medico Teste",
       "offset": 46
     },
     {
-      "val": "13:00:00",
-      "offset": 83
+      "val": "Leonardo Medico Teste",
+      "offset": 98
     }
   ],
-  "location": "EscalaAtendimentoStepDefinitions.prencher_os_campos_hora_de_entrada_segunda_e_hora_de_saida_segunda(String,String)"
+  "location": "GerarHorariosAgendamentoStepDefinition.para_gerar_preencher_os_campos_nome_medico_e_selecionar_combo_medico(String,String)"
 });
 formatter.result({
-  "duration": 8053003011,
+  "duration": 4576601999,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "proximo",
-      "offset": 25
+      "val": "29/04/2018",
+      "offset": 48
+    },
+    {
+      "val": "05/05/2018",
+      "offset": 77
     }
   ],
-  "location": "MedicoStepDefinition.clicar_no_botao_proximo(String)"
+  "location": "GerarHorariosAgendamentoStepDefinition.para_gerar_preencher_os_campos_periodo_inicial_e_periodo_final(String,String)"
 });
 formatter.result({
-  "duration": 100822297127,
-  "error_message": "org.openqa.selenium.TimeoutException: Timed out after 100 seconds waiting for visibility of element located by By.xpath: //BUTTON[@aria-label\u003d\u0027proximo\u0027]\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027DESKTOP-NOMN0V9\u0027, ip: \u0027169.254.237.71\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_51\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir\u003dC:\\Users\\User\\AppData\\Local\\Temp\\scoped_dir5676_25857}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d66.0.3359.139, platform\u003dWIN8_1, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: 8127d5845790846e0235cba75122426e\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat org.medivita.core.BasePage.esperarElementoEClicarBotao(BasePage.java:169)\r\n\tat org.medivita.pages.MedicoPage.clicarBotaoProximo(MedicoPage.java:97)\r\n\tat org.medivita.stepDefinitions.MedicoStepDefinition.clicar_no_botao_proximo(MedicoStepDefinition.java:97)\r\n\tat ✽.And clicar no botao proximo \"proximo\"(Features/dir_b/escalaatendimento.feature:34)\r\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//BUTTON[@aria-label\u003d\u0027proximo\u0027]\"}\n  (Session info: chrome\u003d66.0.3359.139)\n  (Driver info: chromedriver\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 285 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027DESKTOP-NOMN0V9\u0027, ip: \u0027169.254.237.71\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_51\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir\u003dC:\\Users\\User\\AppData\\Local\\Temp\\scoped_dir5676_25857}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d66.0.3359.139, platform\u003dWIN8_1, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: 8127d5845790846e0235cba75122426e\n*** Element info: {Using\u003dxpath, value\u003d//BUTTON[@aria-label\u003d\u0027proximo\u0027]}\r\n\tat sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:422)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:126)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)\r\n\tat org.medivita.core.BasePage.esperarElementoEClicarBotao(BasePage.java:169)\r\n\tat org.medivita.pages.MedicoPage.clicarBotaoProximo(MedicoPage.java:97)\r\n\tat org.medivita.stepDefinitions.MedicoStepDefinition.clicar_no_botao_proximo(MedicoStepDefinition.java:97)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:497)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)\r\n",
+  "duration": 103482814623,
+  "error_message": "org.openqa.selenium.TimeoutException: Timed out after 100 seconds waiting for visibility of element located by By.xpath: // TD[@id\u003d\u0027md-0-month-2018-4-25\u0027]//SPAN[@class\u003d\u0027md-calendar-date-selection-indicator\u0027][text()\u003d\u002725\u0027]\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027DESKTOP-NOMN0V9\u0027, ip: \u0027169.254.237.71\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_51\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir\u003dC:\\Users\\User\\AppData\\Local\\Temp\\scoped_dir6060_102}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d66.0.3359.181, platform\u003dWIN8_1, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: d414abbacb5a29b9a5d01fb9be6e1930\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat org.medivita.core.BasePage.esperarElementoEClicarBotao(BasePage.java:175)\r\n\tat org.medivita.pages.GerarHorariosAgendamentoPage.setPeriodoFinal(GerarHorariosAgendamentoPage.java:35)\r\n\tat org.medivita.stepDefinitions.GerarHorariosAgendamentoStepDefinition.para_gerar_preencher_os_campos_periodo_inicial_e_periodo_final(GerarHorariosAgendamentoStepDefinition.java:65)\r\n\tat ✽.And para gerar preencher os campos periodo inicial \"29/04/2018\" e periodo final \"05/05/2018\"(Features/dir_c/gerarhorariosagendamento.feature:30)\r\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"// TD[@id\u003d\u0027md-0-month-2018-4-25\u0027]//SPAN[@class\u003d\u0027md-calendar-date-selection-indicator\u0027][text()\u003d\u002725\u0027]\"}\n  (Session info: chrome\u003d66.0.3359.181)\n  (Driver info: chromedriver\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 501 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027DESKTOP-NOMN0V9\u0027, ip: \u0027169.254.237.71\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_51\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir\u003dC:\\Users\\User\\AppData\\Local\\Temp\\scoped_dir6060_102}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d66.0.3359.181, platform\u003dWIN8_1, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: d414abbacb5a29b9a5d01fb9be6e1930\n*** Element info: {Using\u003dxpath, value\u003d// TD[@id\u003d\u0027md-0-month-2018-4-25\u0027]//SPAN[@class\u003d\u0027md-calendar-date-selection-indicator\u0027][text()\u003d\u002725\u0027]}\r\n\tat sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:422)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:357)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:39)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:126)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)\r\n\tat org.medivita.core.BasePage.esperarElementoEClicarBotao(BasePage.java:175)\r\n\tat org.medivita.pages.GerarHorariosAgendamentoPage.setPeriodoFinal(GerarHorariosAgendamentoPage.java:35)\r\n\tat org.medivita.stepDefinitions.GerarHorariosAgendamentoStepDefinition.para_gerar_preencher_os_campos_periodo_inicial_e_periodo_final(GerarHorariosAgendamentoStepDefinition.java:65)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:497)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)\r\n",
   "status": "failed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Tarde",
-      "offset": 37
-    },
-    {
-      "val": "60",
-      "offset": 66
+      "val": "salvar",
+      "offset": 24
     }
   ],
-  "location": "EscalaAtendimentoStepDefinitions.prencher_os_campos_periodo_quarta_e_intervalo_quarta(String,String)"
+  "location": "GerarHorariosAgendamentoStepDefinition.clicar_no_botao_salvar(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 49
-    },
-    {
-      "val": "Agendamento",
-      "offset": 85
-    }
-  ],
-  "location": "EscalaAtendimentoStepDefinitions.prencher_os_campos_quantidade_de_vagas_quarta_e_ordem_de_atendimento_quarta(String,String)"
+  "location": "GerarHorariosAgendamentoStepDefinition.validar_mensagem_de_sucesso_para_gerar_horarios()"
 });
 formatter.result({
   "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "13:30:00",
-      "offset": 45
-    },
-    {
-      "val": "18:30:00",
-      "offset": 81
-    }
-  ],
-  "location": "EscalaAtendimentoStepDefinitions.prencher_os_campos_hora_de_entrada_quarta_e_hora_de_saida_quarta(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MedicoStepDefinition.validar_mensagem_de_sucesso()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.after({
-  "duration": 1082867391,
-  "error_message": "org.openqa.selenium.WebDriverException: unknown error: Element \u003cbutton class\u003d\"md-icon-button md-button md-ink-ripple\" type\u003d\"button\" ng-transclude\u003d\"\" aria-label\u003d\"Sair\" ng-click\u003d\"logout()\"\u003e...\u003c/button\u003e is not clickable at point (930, 24). Other element would receive the click: \u003cmd-icon aria-label\u003d\"Close dialog\" class\u003d\"ng-scope material-icons\"\u003e...\u003c/md-icon\u003e\n  (Session info: chrome\u003d66.0.3359.139)\n  (Driver info: chromedriver\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform\u003dWindows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 563 milliseconds\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027DESKTOP-NOMN0V9\u0027, ip: \u0027169.254.237.71\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_51\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir\u003dC:\\Users\\User\\AppData\\Local\\Temp\\scoped_dir5676_25857}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d66.0.3359.139, platform\u003dWIN8_1, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: 8127d5845790846e0235cba75122426e\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:422)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)\r\n\tat org.medivita.core.BasePage.esperarEClicarBotao(BasePage.java:174)\r\n\tat org.medivita.pages.EscalaAtendimentoPage.logoff(EscalaAtendimentoPage.java:69)\r\n\tat org.medivita.stepDefinitions.EscalaAtendimentoStepDefinitions.afterNovoMedico(EscalaAtendimentoStepDefinitions.java:28)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:497)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)\r\n",
-  "status": "failed"
-});
 });

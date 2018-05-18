@@ -9,7 +9,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class EscalaAtendimentoStepDefinitions {
+public class EscalaAtendimentoStepDefinition {
 
 	private LoginPage page = new LoginPage();
 	private MenuEsquerdoPage menuEsquerdoPage = new MenuEsquerdoPage();
@@ -53,12 +53,8 @@ public class EscalaAtendimentoStepDefinitions {
 
 	@Then("^prencher os campos periodo \\(segunda\\)  \"([^\"]*)\" e intervalo \\(segunda\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_periodo_segunda_e_intervalo_segunda(String arg1, String arg2) throws Throwable {
-		escalaAtendimentoPage.setPeriodo("PeriodoSegunda", "Tarde");
-		escalaAtendimentoPage.setIntervalo("intervaloAgendamentoSegunda", "Tarde");
-		escalaAtendimentoPage.setQuantidadeVagas("quantidadeVagasSegunda", "Tarde");
-		escalaAtendimentoPage.setOrdemAtendimento("ordemAgendamentoSegunda", "Tarde");
-		escalaAtendimentoPage.setHoraEntrada("horaEntradaSegunda", "Tarde");
-		escalaAtendimentoPage.setHoraSaida("horaSaidaSegunda", "Tarde");
+		escalaAtendimentoPage.setPeriodo("PeriodoSegunda", "Manhã");
+		escalaAtendimentoPage.setIntervalo("intervaloAgendamentoSegunda", arg2);
 
 		// escalaAtendimentoPage.setIntervalo("intervaloAgendamentoSegunda",
 		// arg2);
@@ -67,35 +63,40 @@ public class EscalaAtendimentoStepDefinitions {
 	@Then("^prencher os campos quantidade de vagas \\(segunda\\) \"([^\"]*)\" e ordem de atendimento \\(segunda\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_quantidade_de_vagas_segunda_e_ordem_de_atendimento_segunda(String arg1, String arg2)
 			throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(9031);
+		escalaAtendimentoPage.setQuantidadeVagas("quantidadeVagasSegunda", arg1);
+		escalaAtendimentoPage.setOrdemAtendimento("ordemAgendamentoSegunda", arg2);
 	}
 
 	@Then("^prencher os campos hora de entrada \\(segunda\\) \"([^\"]*)\" e hora de saida \\(segunda\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_hora_de_entrada_segunda_e_hora_de_saida_segunda(String arg1, String arg2)
 			throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(8031);
+		escalaAtendimentoPage.setHoraEntrada("horaEntradaSegunda", arg1);
+		escalaAtendimentoPage.setHoraSaida("horaSaidaSegunda", arg2);
 	}
 
 	@Then("^prencher os campos periodo \\(quarta\\) \"([^\"]*)\" e intervalo \\(quarta\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_periodo_quarta_e_intervalo_quarta(String arg1, String arg2) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-
+		escalaAtendimentoPage.setPeriodo("PeriodoQuarta", "Tarde");
+		escalaAtendimentoPage.setIntervalo("intervaloAgendamentoQuarta", arg2);
 	}
 
 	@Then("^prencher os campos quantidade de vagas \\(quarta\\) \"([^\"]*)\" e ordem de atendimento \\(quarta\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_quantidade_de_vagas_quarta_e_ordem_de_atendimento_quarta(String arg1, String arg2)
 			throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(9000);
+		escalaAtendimentoPage.setQuantidadeVagas("quantidadeVagasQuarta", arg1);
+		escalaAtendimentoPage.setOrdemAtendimento("ordemAgendamentoQuarta", arg2);
 	}
 
 	@Then("^prencher os campos hora de entrada \\(quarta\\) \"([^\"]*)\" e hora de saida \\(quarta\\) \"([^\"]*)\"$")
 	public void prencher_os_campos_hora_de_entrada_quarta_e_hora_de_saida_quarta(String arg1, String arg2)
 			throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(10000);
+		escalaAtendimentoPage.setHoraEntrada("horaEntradaQuarta", arg1);
+		escalaAtendimentoPage.setHoraSaida("horaSaidaQuarta", arg2);
+	}
+
+	@Then("^salvar escala \"([^\"]*)\"$")
+	public void salvar_escala(String arg1) throws Throwable {
+		escalaAtendimentoPage.salvarEscala(arg1);
 	}
 
 }

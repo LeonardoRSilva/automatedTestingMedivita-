@@ -12,7 +12,7 @@ public class MenuEsquerdoPage extends BasePage {
 	}
 
 	public void selecionarMenu(String text) {
-		selecionarItemMenu(By.xpath(text));
+		esperarElementoEClicarBotao(By.xpath(text));
 	}
 
 	public void fecharMenu(String text) {
