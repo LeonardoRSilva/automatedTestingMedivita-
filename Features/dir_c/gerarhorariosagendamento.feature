@@ -28,7 +28,7 @@ Feature: Caso de Teste de Gerar Horarios de Agendamento
     Then  clicar botao (Gerar Horarios) "Gerar Horarios"   
 		And   para gerar preencher os campos nome (medico) <nome> e selecionar combo (medico) <nome>
 		And   para gerar preencher os campos periodo inicial <periodoinicial> e periodo final <periodofinal>
-		And   clicar no botao salvar "salvar"
+		And   para gerar clicar no botao salvar "Save"
 		Then  validar mensagem de sucesso para gerar horarios
 
     Examples: 

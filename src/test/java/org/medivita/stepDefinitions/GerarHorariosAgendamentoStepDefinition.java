@@ -66,10 +66,9 @@ public class GerarHorariosAgendamentoStepDefinition {
 		System.out.println(a);
 	}
 
-	@When("^clicar no botao salvar \"([^\"]*)\"$")
-	public void clicar_no_botao_salvar(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(6031);
+	@When("^para gerar clicar no botao salvar \"([^\"]*)\"$")
+	public void para_gerar_clicar_no_botao_salvar(String arg1) throws Throwable {
+		gerarHorariosAgendamentoPage.gerarHorarios(arg1);
 	}
 
 	@Then("^validar mensagem de sucesso para gerar horarios$")

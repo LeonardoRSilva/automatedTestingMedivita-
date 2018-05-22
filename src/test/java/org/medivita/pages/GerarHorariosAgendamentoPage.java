@@ -21,7 +21,7 @@ public class GerarHorariosAgendamentoPage extends BasePage {
 		array = periodoInicial.split("/");
 
 		esperarElementoEClicarBotao(By.xpath("(//DIV[@class='md-datepicker-expand-triangle ng-scope'])[3]"));
-		esperarElementoEClicarBotao(By.xpath("// TD[contains(@id,'md-0-month-" + array[2] + "-"
+		esperarElementoEClicarBotao(By.xpath("// TD[contains(@id,'month-" + array[2] + "-"
 				+ (Integer.parseInt(array[1].substring(1)) - 1) + "-" + array[0]
 				+ "')]//SPAN[@class='md-calendar-date-selection-indicator'][text()='" + array[0] + "']"));
 		// TD[contains(@id,'month-2018-4-19')]
@@ -32,7 +32,7 @@ public class GerarHorariosAgendamentoPage extends BasePage {
 		array = periodoFinal.split("/");
 
 		esperarElementoEClicarBotao(By.xpath("(//DIV[@class='md-datepicker-expand-triangle ng-scope'])[4]"));
-		esperarElementoEClicarBotao(By.xpath("// TD[contains(@id,'md-0-month-" + array[2] + "-"
+		esperarElementoEClicarBotao(By.xpath("// TD[contains(@id,'month-" + array[2] + "-"
 				+ (Integer.parseInt(array[1].substring(1)) - 1) + "-" + array[0]
 				+ "')]//SPAN[@class='md-calendar-date-selection-indicator'][text()='" + array[0] + "']"));
 	}
@@ -41,6 +41,11 @@ public class GerarHorariosAgendamentoPage extends BasePage {
 
 	public void clicarBotaoGerarHorarios(String text) {
 		esperarElementoEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));
+	}
+
+	/************ salvar geração de horários *******/
+	public void gerarHorarios(String text) {
+		esperarElementoEClicarBotao(By.xpath("//BUTTON[contains(.,'" + text + "')]"));
 	}
 
 	/******** * logoff **********/

@@ -22,21 +22,20 @@
 Feature: Caso de Teste de Agenda
 
 
-   @fourth
+   @Agendamento
   Scenario Outline: E - Novo Agendamento
-    Given  abrir menu esquerdo e selecionar item compromissos "Compromissos" 
-    Then  aguardar mensagem de carregamento fechar 
-    When  fechar Selecionar a aba "Agendamentos"   
-		And   prencher os campos nome (medico)  <nome> e selecionar combo (medico) <nome>
-		And   prencher os campos periodo inicial <periodoinicial> e periodo final <periodofinal>
+    Given  abrir menu esquerdo e selecionar item compromissos "compromissos"  
+    When  em compromissos selecionar a aba "Agendamentos"   
+		And   na aba agendamentos preencher os campos nome (medico)  <nome> e selecionar combo (medico) <nome>
+		And   na aba agendamentos prencher os campos periodo inicial <periodoinicial> e periodo final <periodofinal>
 		And   clicar no botao pesquisar "pesquisar"
 		And   clicar no botao agendar "agendar" no item do dia <dia> no horario <horario>
 		And   clicar no botao pesquisar "confirmar"
 		Then  validar mensagem de sucesso
 
     Examples: 
-      | nome                | periodoinicial | periodofinal  | dia             | horario    |
-			| "João Médico Teste" | "29/04/2018"   | "05/05/2018"  | "Segunda-Feira" | "08:00:00" |
+      | nome                    | periodoinicial | periodofinal  | dia             | horario    |
+			| "Leonardo Medico Teste" | "29/04/2018"   | "05/05/2018"  | "Segunda-Feira" | "08:00:00" |
       
 
       
