@@ -42,6 +42,25 @@ public class AgendamentoPage extends BasePage {
 				+ "')]//SPAN[@class='md-calendar-date-selection-indicator'][text()='" + array[0] + "']"));
 	}
 
+	/************ clicar botao pesquisar *******/
+	public void clicarBotaoPesquisar(String text) {
+		esperarElementoEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));
+	}
+
+	/************ fechar pesquisa *******/
+	public void fecharPesquisa(String text) {
+		esperarElementoEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));
+	}
+
+	public void clicarBotaoAgendar(String data) {
+		esperarElementoEClicarBotao(By.xpath("(//ng-md-icon[@class='" + data + " 08:00:00'])[1]"));
+		// (//ng-md-icon[@class="28/05/2018 08:00:00"])[1]
+	}
+
+	public void clicarSalvarAgendamento(String text) {
+		esperarElementoEClicarBotao(By.xpath("//BUTTON[contains(.,'" + text + "')]"));
+	}
+
 	/******** * logoff **********/
 	public void logoff(String text) throws InterruptedException {
 		esperarEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));

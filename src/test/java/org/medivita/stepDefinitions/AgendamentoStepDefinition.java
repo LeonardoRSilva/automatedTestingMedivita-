@@ -22,12 +22,12 @@ public class AgendamentoStepDefinition {
 	public void inicalizar() {
 
 		page.acessarTelaInicial();
-		page.logar("julia@julia.com", "jul123456");
+		page.logar("leonardo.rsil@gmail.com", "pac123456");
 	}
 
 	@After(" @Agendamento")
 	public void afterNovoMedico() throws InterruptedException {
-
+		Thread.sleep(2000);
 		agendamentoPage.logoff("Sair");
 		Thread.sleep(1000);
 	}
@@ -65,17 +65,46 @@ public class AgendamentoStepDefinition {
 		System.out.println(a);
 	}
 
-	@When("^clicar no botao pesquisar \"([^\"]*)\"$")
-	public void clicar_no_botao_pesquisar(String arg1) throws Throwable {
+	@When("^clicar no botao pesquisar \"([^\"]*)\" e fechar pesquisa \"([^\"]*)\"$")
+	public void clicar_no_botao_pesquisar_e_fechar_pesquisa(String arg1, String arg2) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(19000);
+		agendamentoPage.clicarBotaoPesquisar(arg1);
+		agendamentoPage.fecharPesquisa(arg2);
+
 	}
 
 	@When("^clicar no botao agendar \"([^\"]*)\" no item do dia \"([^\"]*)\" no horario \"([^\"]*)\"$")
 	public void clicar_no_botao_agendar_no_item_do_dia_no_horario(String arg1, String arg2, String arg3)
 			throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		Thread.sleep(9000);
+		// String diaSemana =
+		// getDayWeek(calPeriodoInicialAux.get(Calendar.DAY_OF_WEEK));
+
+		SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+
+		Calendar calPeriodoInicial = Calendar.getInstance();
+		calPeriodoInicial.set(Calendar.DAY_OF_MONTH, calPeriodoInicial.get(Calendar.DAY_OF_MONTH) + 1);
+
+		Calendar calPeriodoFinal = Calendar.getInstance();
+		calPeriodoFinal.set(Calendar.DAY_OF_MONTH, calPeriodoFinal.get(Calendar.DAY_OF_MONTH) + 8);
+
+		while (calPeriodoInicial.before(calPeriodoFinal)) {
+
+			// se o dia da semana for igual a segunda feira
+			if (calPeriodoInicial.get(Calendar.DAY_OF_WEEK) == 2) {
+				agendamentoPage.clicarBotaoAgendar(s.format(calPeriodoInicial.getTime()));
+				System.out.println(s.format(calPeriodoInicial.getTime()));
+				break;
+			}
+
+			calPeriodoInicial.set(Calendar.DAY_OF_MONTH, calPeriodoInicial.get(Calendar.DAY_OF_MONTH) + 1);
+
+		}
+
+	}
+
+	@When("^na tela de confirmacao clicar no botao salvar \"([^\"]*)\"$")
+	public void na_tela_de_confirmacao_clicar_no_botao_salvar(String arg1) throws Throwable {
+		agendamentoPage.clicarSalvarAgendamento(arg1);
 	}
 
 }

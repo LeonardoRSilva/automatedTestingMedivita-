@@ -38,7 +38,6 @@ public class GerarHorariosAgendamentoPage extends BasePage {
 	}
 
 	/************ clicar botao gerar horários *******/
-
 	public void clicarBotaoGerarHorarios(String text) {
 		esperarElementoEClicarBotao(By.xpath("//BUTTON[@aria-label='" + text + "']"));
 	}

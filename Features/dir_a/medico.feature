@@ -36,8 +36,8 @@ Feature: Caso de Teste de Medico
 		Then validar mensagem de sucesso
 
     Examples: 
-      | tiporegistro | estadoregistro | registroprofissional | nome                    | rg             | cpf              | datanascimento | cargo    | setor      | especialidade | dataadmissao | telefone     | sexo        | cep        | numero | email                     | senha          |status     |  
-			| "CRM"        | "Minas Gerais" | "15498768"           | "Leonardo Medico Teste" | "36.596.765-8" | "330.274.097-27" | "01/01/1988"   | "Medico" | "Cirurgia" | "Pediatra"    | "02/04/2018" | "68984606843"| "Masculino" | "38405211" | "1057" | "leonardo.rsil@gmail.com" | "leonardo123456" | "Ativo" |
+      | tiporegistro | estadoregistro | registroprofissional | nome                    | rg             | cpf              | datanascimento | cargo    | setor      | especialidade | dataadmissao | telefone     | sexo        | cep        | numero | email                       | senha          |status     |  
+			| "CRM"        | "Minas Gerais" | "15498768"           | "Joao Medico Teste"     | "36.596.765-8" | "330.274.097-27" | "01/01/1988"   | "Medico" | "Cirurgia" | "Pediatra"    | "02/04/2018" | "68984606843"| "Masculino" | "38405211" | "1057" | "joaomedicoteste@gmail.com" | "joaomt123456" | "Ativo" |
       
       
 

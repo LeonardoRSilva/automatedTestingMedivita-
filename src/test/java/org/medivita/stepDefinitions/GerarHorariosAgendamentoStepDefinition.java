@@ -23,7 +23,7 @@ public class GerarHorariosAgendamentoStepDefinition {
 	public void inicalizar() {
 
 		page.acessarTelaInicial();
-		page.logar("carina@carina.com", "cari123456");
+		page.logar("mariapacienteteste@gmail.com", "pac123456");
 	}
 
 	@After(" @GerarHorariosAgendamento")

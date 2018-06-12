@@ -8,9 +8,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {
 		// "Features/dir_a/medico.feature"
-		// "Features/dir_b/escalaatendimento.feature"
+		"Features/dir_b/escalaatendimento.feature"
 		// "Features/dir_c/gerarhorariosagendamento.feature"
-		"Features/dir_d/agendamento.feature"
+		// "Features/dir_d/agendamento.feature"
 
 }, /* the path of the feature files */
 		glue = { "org.medivita.stepDefinitions" }, // the path of

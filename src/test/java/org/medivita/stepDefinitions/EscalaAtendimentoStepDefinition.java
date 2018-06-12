@@ -19,7 +19,7 @@ public class EscalaAtendimentoStepDefinition {
 	public void inicalizar() {
 
 		page.acessarTelaInicial();
-		page.logar("leonardo.rsil@gmail.com", "leo123456");
+		page.logar("joaomedicoteste@gmail.com", "joaomt123456");
 	}
 
 	@After("@EscalaAtendimento")
