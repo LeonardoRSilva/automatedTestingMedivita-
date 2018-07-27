@@ -70,7 +70,24 @@ Os arquivos contendo a especificação em liguagem natura possuem o formato ".fe
 
 Exemplo de mapeamento entre a especificação e a classe concreta
 
+![mapeamento](https://user-images.githubusercontent.com/13081442/43345392-c1000b76-91c3-11e8-81bc-5830080de911.png)
 
+Selenium WebDriver: 
+![selenium](https://user-images.githubusercontent.com/13081442/43345537-346961ca-91c4-11e8-9af1-fcd16af1ee1d.png)
 
+Para cada passo da especificação é necessário implementar o código que torna a ação real e concreta(através das funções do Selenium WebDriver).
+   - Emular as ações do usuário no browser
+   
+![implementa](https://user-images.githubusercontent.com/13081442/43345817-4d615dc6-91c5-11e8-8da1-37355fa6a58d.png)  
+
+## 6. Execução (dos casos de Teste)
+
+A criação da classe "TestRunner.java" é necessária para a correta execução do projeto, indicando o local dos arquivos ".feature" e o local das classes que contém a implementação concreta.
+
+![concreta](https://user-images.githubusercontent.com/13081442/43346199-a240826c-91c6-11e8-8ee2-3d4d62552cbc.png)
+
+Exemplo da execução do cenário de Cadastro de novo Médico.
 
 ![cadastro de medico_1](https://user-images.githubusercontent.com/13081442/43341707-b22c0e0e-91b6-11e8-83dc-132288cf5638.gif)
+
+
