@@ -86,8 +86,19 @@ A criação da classe "TestRunner.java" é necessária para a correta execução
 
 ![concreta](https://user-images.githubusercontent.com/13081442/43346199-a240826c-91c6-11e8-8ee2-3d4d62552cbc.png)
 
+Execução via prompt (Executa os testes e gera o relatório na pasta Target/site):
+ - Comando: $mvn clean test site
+
 Exemplo da execução do cenário de Cadastro de novo Médico.
 
 ![cadastro de medico_1](https://user-images.githubusercontent.com/13081442/43341707-b22c0e0e-91b6-11e8-83dc-132288cf5638.gif)
 
 
+## 7. Entrega (análise dos resultados)
+
+Allure: ![allure](https://user-images.githubusercontent.com/13081442/43346724-b17366da-91c8-11e8-8b5a-c0cb3a892465.png)
+
+Resultados Gerais:
+
+
+![especifico](https://user-images.githubusercontent.com/13081442/43347216-e101c89a-91ca-11e8-91b9-3a1a2b76dc61.png)
